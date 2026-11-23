@@ -1,29 +1,22 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-/// <summary>
-/// Controls button interactions on the Main Menu screen,
-/// including starting the game and toggling the rules panel.
-/// </summary>
+// Handles main menu buttons for starting the game and opening/closing the rules panel
 public class MainMenuController : MonoBehaviour
 {
-    // The exact name of the first gameplay scene to load
+    // first gameplay scene
     [SerializeField] private string firstSceneName = "Scene1_Platform";
 
-    // Reference to the UI Panel that displays the survival rules
+    // UI panel that shows the survival rules
     [SerializeField] private GameObject survivePanel;
 
-    /// <summary>
-    /// Loads the opening gameplay scene when the Play button is clicked.
-    /// </summary>
+    // Loads the first scene when the Play button is clicked
     public void PlayGame()
     {
         SceneManager.LoadScene(firstSceneName);
     }
 
-    /// <summary>
-    /// Makes the rules panel visible when the "How to Survive" button is clicked.
-    /// </summary>
+    // Turns on the rules panel when "How to Survive" is clicked
     public void OpenHowToPlay()
     {
         if (survivePanel != null)
@@ -32,9 +25,7 @@ public class MainMenuController : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Hides the rules panel when the "Back" button is clicked.
-    /// </summary>
+    // Hides the rules panel when "Back" is clicked
     public void CloseHowToPlay()
     {
         if (survivePanel != null)
