@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// Handles short camera shake effects during tense story moments
+// Handles short camera shake effects during an attack on player
 public class CameraShake : MonoBehaviour
 {
     public float shakeDuration = 0.25f; // How long the shake lasts in seconds
@@ -41,3 +41,4 @@ public class CameraShake : MonoBehaviour
         timer = shakeDuration;
     }
 }
+
